@@ -12,7 +12,8 @@
 	<script type="text/javascript">
 		var status = false;
 		
-		var getUserName = function() { VK.api('users.get', {'user_ids': '1393137'}, function(data) {
+		var getUserName = function() { 
+		    VK.api('users.get', {'user_ids': '1393137'}, function(data) {
 				console.log("In..");
 				console.log(data);
 			});
@@ -23,7 +24,10 @@
 		VK.init(function() { 
 			status = true;
 			
-		    getUserName();
+		    VK.api('users.get', {'user_ids':'1393137'}, function(data) {
+				console.log("In..");
+				console.log(data);
+			});
 		
 			document.write('Ok!'); 
 		}, function() { 
