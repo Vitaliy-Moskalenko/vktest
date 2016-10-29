@@ -11,9 +11,10 @@
 	
 	<script type="text/javascript">
 		var status = false;
+		var errNo = 0;
 		
 		var getUserName = function() { 
-		    VK.api('users.get', {user_ids:'1393137'}, function(data) {
+		    VK.api("users.get", {user_ids:"1393137"}, function(data) {
 				console.log("In..");
 				console.log(data);
 			});
@@ -22,9 +23,10 @@
 
 	
 		VK.init(function() { 
-			status = true;
+			status = true;			
 			
-		    VK.api('users.get', { user_ids:1393137 }, function(data) {
+			
+		    VK.api("users.get", { user_ids:"1393137" }, function(data) {
 				console.log("In..");
 				console.log(data);
 			});
