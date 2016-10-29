@@ -10,9 +10,20 @@
 	<script src="https://vk.com/js/api/xd_connection.js?2"  type="text/javascript"></script>
 	
 	<script type="text/javascript">
+		var status = false;
+		
+		var getUserName = function(){ VK.api('users.get', {user_ids: '1393137'}, function(data) {
+				document.write(data);
+			});
+		};
+
 
 	
 		VK.init(function() { 
+			status = true;
+			
+		
+		
 			document.write('Ok!'); 
 		}, function() { 
 			document.write('Fail!');
