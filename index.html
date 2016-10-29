@@ -14,9 +14,9 @@
 		var errNo = 0;
 		
 		var getUserName = function() { 
-		    VK.api("users.get", {user_ids:"1393137"}, function(data) {
+		    VK.api("users.get", {"user_ids":"1393137"}, function(data) {
 				console.log("In..");
-				console.log(data);
+				console.log(data.response);
 			});
 		};
 
@@ -25,16 +25,13 @@
 		VK.init(function() { 
 			status = true;			
 			
-			
-		    VK.api("users.get", { "user_ids" : "3643276" }, function(data) {
-				console.log("In..");
-				console.log(data.response);
-			});
+			getUserName();
 		
 			document.write('Ok!'); 
 		}, function() { 
 			document.write('Fail!');
 		}, '5.59'); 
+		
 </script>
 
 
