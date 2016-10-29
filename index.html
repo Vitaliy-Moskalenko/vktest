@@ -24,10 +24,7 @@
 		VK.init(function() { 
 			status = true;
 			
-		    VK.api('users.get', {'user_ids':'1393137'}, function(data) {
-				console.log("In..");
-				console.log(data);
-			});
+			getUserName();
 		
 			document.write('Ok!'); 
 		}, function() { 
